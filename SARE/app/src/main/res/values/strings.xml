@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SARE</string>
+    <string name="lblCedula">Cedula</string>
+</resources>

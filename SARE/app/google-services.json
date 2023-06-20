@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "157644341446",
+    "project_id": "sareapp-5e354",
+    "storage_bucket": "sareapp-5e354.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157644341446:android:303e0d0e5c2e967d97d7c7",
+        "android_client_info": {
+          "package_name": "ec.com.lemas.sare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157644341446-p96799eh92n0ln5pkskdvkj0u5qi4gmq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ec.com.lemas.sare",
+            "certificate_hash": "552945fc3a558c21b03cf3a9d4d349e1276ac32d"
+          }
+        },
+        {
+          "client_id": "157644341446-q2tb2mop8ls2p9nuvukvfdc0vpahuf8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3rL3O2M9zeaGrJQNYA62c1W1HwjWtRfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157644341446-q2tb2mop8ls2p9nuvukvfdc0vpahuf8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
