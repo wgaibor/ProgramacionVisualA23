@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textHeader">30sp</dimen>
+    <dimen name="textTitle">20sp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+</resources>

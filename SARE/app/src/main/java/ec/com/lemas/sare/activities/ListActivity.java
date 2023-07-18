@@ -1,6 +1,7 @@
 package ec.com.lemas.sare.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -93,7 +94,8 @@ public class ListActivity extends AppCompatActivity {
 
         FruitAdapter fruitAdapter = new FruitAdapter(lstFrutas, this);
         rvListado.setHasFixedSize(true);
-        rvListado.setLayoutManager(new LinearLayoutManager(this));
+        //rvListado.setLayoutManager(new LinearLayoutManager(this));
+        rvListado.setLayoutManager(new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
         rvListado.setAdapter(fruitAdapter);
     }
 }
