@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395345346955",
+    "project_id": "examen2023wgaibor",
+    "storage_bucket": "examen2023wgaibor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395345346955:android:37c82d9c714f5895a8ef8e",
+        "android_client_info": {
+          "package_name": "ec.com.lemas.examena23"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395345346955-lc5prd4p9updn1o322g4sgei001amg5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXXRUH2c63uYF9n_0BsdWGuqKWTFyu_ag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395345346955-lc5prd4p9updn1o322g4sgei001amg5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExamenA23</string>
+    <string name="identificacion">DNI</string>
+    <string name="nombre">Nombre</string>
+    <string name="mail">Mail</string>
+    <string name="guardar">Guardar</string>
+    <string name="mostrarListado">Mostrar Listado</string>
+</resources>
