@@ -18,6 +18,7 @@ import android.widget.ImageView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.firestore.DocumentReference;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // request code
     private final int PICK_IMAGE_REQUEST = 22;
 
+    private String enlaceFoto="";
+
 
     FirebaseFirestore db;
     FirebaseStorage storage;
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btnGuardar){
-            guardarInformacion();
+            subirFoto();
         } else if (v.getId() == R.id.btnSeleccionarFoto) {
             seleccionarImage();
         } else if (v.getId() == R.id.btnSubirFoto) {
@@ -127,6 +130,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
                             mostrarMensajeSnack("La imagen se ha subido exitosamente :) ");
+
+                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    enlaceFoto = uri.toString();
+                                    guardarInformacion(enlaceFoto);
+                                }
+                            });
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -184,10 +195,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void guardarInformacion() {
+    private void guardarInformacion(String urlFoto) {
         Map<String, Object> user = new HashMap<>();
         user.put("cedula", cedula.getText().toString());
         user.put("nombre", nombre.getText().toString());
+        user.put("url", urlFoto);
 
         db.collection("usuario")
                 .add(user)
@@ -209,6 +221,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void despuesDeGuardar(String id) {
         cedula.setText("");
         nombre.setText("");
+        imgPrevisualizacion.setImageDrawable(null);
         mostrarMensajeSnack("Se creo el registro "+id);
 
     }
