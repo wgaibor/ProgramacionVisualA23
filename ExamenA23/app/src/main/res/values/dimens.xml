@@ -2,4 +2,7 @@
 <resources>
     <dimen name="dimen_10dp">10dp</dimen>
     <dimen name="fuente_20sp">20sp</dimen>
+    <dimen name="fuente_30sp">30sp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
 </resources>
